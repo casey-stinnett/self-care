@@ -6,3 +6,4 @@ $(document).on('turbolinks:load', function() {
 	  $('#myInput').trigger('focus')
 	});
 });
+
