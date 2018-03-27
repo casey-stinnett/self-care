@@ -1,5 +1,7 @@
 {
   "name": "self-care",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "mdbootstrap": "^4.5.0"
+  }
 }
