@@ -35,9 +35,12 @@
           </a>
         </div>
       </div>
+      <div class="modal-body hidden" data-spy="scroll" data-target="#navbar-example">
+        <%= render 'icon_goals' %>
+      </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Save changes</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Next</button>
+        <button id="modal-next" type="button" class="btn btn-secondary" >Next</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Save changes</button>
       </div>
     </div>
   </div>
