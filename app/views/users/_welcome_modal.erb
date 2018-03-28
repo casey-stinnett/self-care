@@ -36,7 +36,9 @@
         </div>
       </div>
       <div class="modal-body hidden" data-spy="scroll" data-target="#navbar-example">
-        <%= render 'icon_goals' %>
+        <% @icons.each do |icon| %>
+          <%= render 'icon_goals', icon: icon %>
+        <% end %>
       </div>
       <div class="modal-footer">
         <button id="modal-next" type="button" class="btn btn-secondary" >Next</button>
