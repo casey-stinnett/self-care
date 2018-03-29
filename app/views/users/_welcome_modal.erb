@@ -1,54 +1,56 @@
 <div id="welcome-modal" class="modal fade" tabindex="-1" role="dialog">
-  <div class="modal-dialog modal-md" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 id="modal-header1" class="modal-title">Choose Your Avatar</h5>
-        <h5 id="modal-header2" class="modal-title hidden">Pick Some Starter Goals</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <%= form_tag do %>
-        <div id="avatar-body" class="modal-body">
-          <div id="avatarCarousel" class="carousel slide" data-ride="carousel">
-            <ol class="carousel-indicators">
-                <li data-target="#avatarCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#avatarCarousel" data-slide-to="1"></li>
-                <li data-target="#avatarCarousel" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <%= image_tag 'boy_happy.png', class: 'd-block w-100', data_image_prefix: "boy_", alt: 'First slide' %>
+  <%= form_with url: '/somewhere-cool' do %>
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 id="modal-header1" class="modal-title">Choose Your Avatar</h5>
+          <h5 id="modal-header2" class="modal-title hidden">Pick Some Starter Goals</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body-wrapper">
+          <div id="avatar-body" class="modal-body">
+            <div id="avatarCarousel" class="carousel slide" data-ride="carousel">
+              <ol class="carousel-indicators">
+                  <li data-target="#avatarCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#avatarCarousel" data-slide-to="1"></li>
+                  <li data-target="#avatarCarousel" data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <%= image_tag 'boy_happy.png', class: 'd-block w-100', data_image_prefix: "boy_", alt: 'First slide' %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag 'girl_happy.png', class: 'd-block w-100', data_image_prefix: "girl_", alt: 'Second slide' %>
+                </div>
+                <div class="carousel-item">
+                  <%= image_tag 'awesome_happy.png', class: 'd-block w-100', data_image_prefix: "awesome_", alt: 'Third slide' %>
+                </div>
               </div>
-              <div class="carousel-item">
-                <%= image_tag 'girl_happy.png', class: 'd-block w-100', data_image_prefix: "girl_", alt: 'Second slide' %>
+              <div class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
               </div>
-              <div class="carousel-item">
-                <%= image_tag 'awesome_happy.png', class: 'd-block w-100', data_image_prefix: "awesome_", alt: 'Third slide' %>
+              <div class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
               </div>
-            </div>
-            <div class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </div>
-            <div class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
             </div>
           </div>
-        </div>
-        <div id="goals-body" class="modal-body" data-spy="scroll" data-target="#navbar-example">
-          <div class="card-group justify-content-center">
-            <% @icons.each do |key, icon| %>
-              <%= render 'icon_goals', icon: icon %>
-            <% end %>
+          <div id="goals-body" class="modal-body" data-spy="scroll" data-target="#navbar-example">
+            <div class="card-group justify-content-center">
+              <% @icons.each do |key, icon| %>
+                <%= render 'icon_goals', icon: icon %>
+              <% end %>
+            </div>
           </div>
         </div>
         <div class="modal-footer">
           <button id="modal-next" type="button" class="btn btn-secondary">Next</button>
-          <button id="modal-submit" type="button" class="btn btn-primary" data-dismiss="modal">Save</button>
+          <button id="modal-submit" type="button" disabled class="btn btn-primary" data-dismiss="modal">Save</button>
         </div>
-      <% end %> 
+      </div>
     </div>
-  </div>
+  <% end %> 
 </div>

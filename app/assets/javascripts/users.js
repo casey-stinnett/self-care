@@ -31,12 +31,10 @@ $(document).on('turbolinks:load', function() {
 		e.preventDefault();
 	});
 
-	$('#submit').attr('disabled', true);
-
 	$('#modal-next').click(function(){
 	  // make them move
-	  $('#avatar-body').css('left', '-100%');
-	  $('#goals-body').css('left', '0');
+	  $('#avatar-body').css('margin-left', '-100%');
+	  $('#goals-body').css('margin-left', '0');
 	  // dis- and enable the buttons!
 	  $(this).attr('disabled', true);
 	  $('#modal-submit').attr('disabled', false);
