@@ -1,15 +1,18 @@
-<div class="card text-center">
-	<div class="container">
-		<i class="material-icons"><%= icon %></i>
-		<div class="row">
-			<i class="mdi mdi-remove"></i>
-			<div>0</div>
-			<i class="mdi mdi-add"></i>
+
+<div id="goal-card" class="card text-center" style="max-width: 12rem; min-width: 10rem;">
+			<div class="container">
+				<i class="material-icons md-48 md-dark"><%= icon %></i>
+				<div class="row justify-content-md-center">
+					<i class="material-icons"><%= 'remove' %></i>
+					<div>0</div>
+					<i class="material-icons"><%= 'add' %></i>
+				</div>
+				<div class="row justify-content-md-center">
+					 <div class="column">
+			      <button type="button" class="btn btn-toggle active" data-toggle="button" aria-pressed="Daily" autocomplete="Weekly">
+			        <div class="handle"></div>
+			      </button>
+			    </div>
+			   </div>
+			</div>
 		</div>
-		<style>
-	  .toggle.ios, .toggle-on.ios, .toggle-off.ios { border-radius: 20px; }
-	  .toggle.ios .toggle-handle { border-radius: 20px; }
-		</style>
-		<input type="checkbox" checked data-toggle="toggle" data-on="Daily" data-off="Weekly" data-style="ios">
-	</div>
-</div>
