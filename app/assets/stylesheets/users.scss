@@ -1,10 +1,194 @@
 // Place all the styles related to the users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+html, body {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: image-url("sweet-morning.jpg") no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+section{
+  width:70%;
+  margin-left:200px;
+}
+
+//Side Navbar
+#navbar{
+  overflow:hidden;
+	  width:200px;
+	  height:100%;
+	  position:fixed;
+	  background-color:#FFFFFF;
+	  top:0;
+	  left:0;
+	  z-index:499;
+}
+#primary_nav{
+	  top:0px;
+	  position: fixed;
+	  display: block;
+	  left: -115px;
+	  width: 170px;
+	  height: 100%;
+	  background:rgba(43,150,182,.45);
+	  z-index:500;
+}
+#primary_nav ul{
+	  display: block;
+	  margin-top:80px;
+	  padding-left: 5px;
+	  list-style: none;
+}
+#primary_nav ul li a{
+	  display: block;
+	  padding:0 0 25px 20px;
+	  color: #FFF;
+	  font-weight:bold;
+	  font-size:15px;
+	  text-decoration: none;
+  	-webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+#primary_nav ul li a:hover, #primary_nav ul li a:active{
+	  color: #434244;
+	  padding-left:17px;
+  	text-decoration: none;
+	  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -ms-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+#mobile_nav{
+	  font-size:36px;
+	  position: relative;
+	  display: inline-block;
+  	top:10px;
+	  left:127px;
+  color: #FFF;
+	  text-decoration: none;
+  z-index:1000;
+}
+#mobile_nav:hover{
+  	color: #434244;
+}
+
+// Modal
 .hidden {
   display: none;
 }
 
 .carousel-inner {
-	background: lightblue;
+	background: rgba(0, 204, 255, 1);
+}
+
+#welcome-modal {
+  overflow: hidden;
+  margin: auto;
+}
+
+.modal-body {
+  
+  height: auto;
+	width: 100%;
+  transition: margin 1s ease;
+ }
+
+#avatar-body {
+	margin-left: 0;
+}
+
+#goals-body {
+	margin-left: 100%;
+	top: -515px;
+}
+
+// Icon Cards
+
+#goal-card {
+	padding: 5px;
+	border: none;
+}
+.material-icons.md-48 { 
+	font-size: 48px; 
+}
+
+.material-icons.md-light {
+	color: rgba(0, 204, 255, 1);
+}
+
+.material-icons.md-dark {
+	color: rgba(0, 143, 179, 1);
+}
+
+.btn-toggle {
+  margin: 0 4rem;
+  padding: 0;
+  position: relative;
+  border: none;
+  height: 1.5rem;
+  width: 3rem;
+  border-radius: 1.5rem;
+  color: #6b7381;
+  background: #bdc1c8;
+}
+.btn-toggle:focus,
+.btn-toggle.focus,
+.btn-toggle:focus.active,
+.btn-toggle.focus.active {
+  outline: none;
+}
+.btn-toggle:before,
+.btn-toggle:after {
+  line-height: 1.5rem;
+  width: 4rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: absolute;
+  bottom: 0;
+  transition: opacity .25s;
+}
+.btn-toggle:before {
+  content: 'Off';
+  left: -4rem;
+}
+.btn-toggle:after {
+  content: 'On';
+  right: -4rem;
+  opacity: .5;
+}
+.btn-toggle > .handle {
+  position: absolute;
+  top: 0.1875rem;
+  left: 0.1875rem;
+  width: 1.125rem;
+  height: 1.125rem;
+  border-radius: 1.125rem;
+  background: #fff;
+  transition: left .25s;
+}
+.btn-toggle.active {
+  transition: background-color 0.25s;
+}
+.btn-toggle.active > .handle {
+  left: 1.6875rem;
+  transition: left .25s;
+}
+.btn-toggle.active:before {
+  opacity: .5;
+}
+.btn-toggle.active:after {
+  opacity: 1;
 }
